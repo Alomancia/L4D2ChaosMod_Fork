@@ -10,10 +10,72 @@ Inspired by the chaos mods made for the Grand Theft Auto series - I decided to m
 
 This mod is intended to be run as a sourcemod plugin on a dedicated server. This means it's possible to have a full server of people playing with the mod enabled. Note that only the server needs the mod installed and the clients can join with a vanilla copy of Left 4 Dead 2.
 
-## Prerequisites
 
-- Left 4 Dead 2 or Left 4 Dead 2 dedicated server with sourcemod installed.
-- Need 
+* Video | 
+<br/>None
+
+* Image | 
+<br/>None
+
+* Apply to | 
+	```
+	L4D2
+	```
+
+* Translation Support | 
+	```
+	English
+	```
+
+* <details><summary>Changelog | </summary>
+
+	* v2.8 (2024-07-27)
+		* Changed initial configuration of "Teleport to backroom". Now, all finale maps will be blacklisted to use this effect to prevent softblock.
+    
+	* v1.2.1
+		* [Original Plugin by t0m50n](https://forums.alliedmods.net/showthread.php?p=2693455)
+</details>
+
+* Require
+	1. [left4dhooks](https://forums.alliedmods.net/showthread.php?t=321696)
+
+* <details><summary>ConVar |</summary>
+
+  * cfg/sourcemod/plugin.chaos_mod.cfg
+    ```php
+    // Enable/Disable Chaos Mod
+    // Default: "1"
+    chaosmod_enabled "1"
+
+    // Time in seconds a long effect should be enabled for
+    // Default: "120"
+    // Minimum: "0.100000"
+    chaosmod_long_time_duration "120"
+
+    // Time in seconds a normal effect should be enabled for
+    // Default: "60"
+    // Minimum: "0.100000"
+    chaosmod_normal_time_duration "60"
+
+    // Time in seconds a short effect should be enabled for
+    // Default: "15"
+    // Minimum: "0.100000"
+    chaosmod_short_time_duration "15"
+
+    // How long to wait in seconds between activating effects
+    // Default: "30"
+    // Minimum: "0.100000"
+    chaosmod_time_between_effects "30"
+    ```
+</details>
+
+* <details><summary>Command |</summary>
+
+	* **See Chaos Mod current version**
+		```php
+		chaosmod_version
+		```
+</details>
 
 ## Installation
 
@@ -26,35 +88,3 @@ This mod is intended to be run as a sourcemod plugin on a dedicated server. This
 2. Choose which effects you want to be enabled
 3. Copy the generated text and paste it into %l4d2 install dir%\left4dead2\addons\sourcemod\configs\effects.cfg overwriting the previous contents.
 4. The generated cfg can be pasted back into the configurator to turn effects on and off in the future.
-
-The following cvars can also be changed in the server console and in an auto-generated config file at %l4d2 install dir%\left4dead2\cfg\plugin.chaos_mod.cfg:
-```
-// Enable/Disable Chaos Mod
-// -
-// Default: "1"
-chaosmod_enabled "1"
-
-// Time in seconds a long effect should be enabled for
-// -
-// Default: "60"
-// Minimum: "0.100000"
-chaosmod_long_time_duration "120"
-
-// Time in seconds a normal effect should be enabled for
-// -
-// Default: "30"
-// Minimum: "0.100000"
-chaosmod_normal_time_duration "60"
-
-// Time in seconds a short effect should be enabled for
-// -
-// Default: "15"
-// Minimum: "0.100000"
-chaosmod_short_time_duration "15"
-
-// How long to wait in seconds between activating effects
-// -
-// Default: "30"
-// Minimum: "0.100000"
-chaosmod_time_between_effects "30"
-```
